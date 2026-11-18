@@ -1,0 +1,7 @@
+.venvs/
+results/
+data/
+__pycache__/
+.python/
+models/
+third_party/

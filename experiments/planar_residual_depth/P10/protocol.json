@@ -1,0 +1,58 @@
+{
+  "sequences": {
+    "indoor": "TUM fr3_structure_texture_far, start2s after first RGB, nearest 5Hz,20 frames",
+    "outdoor": "KITTI Raw 2011_09_26_drive_0005_sync image02, frames50..88 step2 (5Hz),20 frames",
+    "drone": "EuRoC MAV V1_01_easy cam0, start10s after first common valid image/pose, nearest5Hz,20 frames; actual indoor drone flight, monochrome camera repeated to RGB"
+  },
+  "scope": "pilot short temporal clips, one per category, not long-duration online SLAM or independently generalizable benchmark",
+  "camera_condition": "provided calibrated K and provided trajectory fixed as camera-error control; external pose GT/GPS-IMU is an optimization input, so not an end-to-end RGB-only deployment demonstration; depth/LiDAR/room scan GT used only after correction",
+  "frames": {
+    "mapping": 16,
+    "future_heldout": 4,
+    "prefixes": [
+      2,
+      4,
+      8,
+      16
+    ]
+  },
+  "model": {
+    "checkpoint": "vggt_omega_1b_512.pt unchanged",
+    "long_side": 384,
+    "mode": "max_size",
+    "context": "first16 mapping RGB jointly once, future4 excluded from VGGT input; fixed raw cache and scale reused across all prefix comparisons. Offline optimization evidence accumulation, not causal online network inference.",
+    "GPU": "host outside sandbox",
+    "OOM_policy": "preserve failure and freeze all-three resolution256 before any depth GT evaluation; do not silently lower only one sequence"
+  },
+  "mask_policy": "one common physical plane per sequence, agent RGB-only polygons in each frame; no user review as authorized; frozen before raw depth inspection/depth GT evaluation",
+  "matching": {
+    "images": "same undistorted native crop capped768, never upsample",
+    "SIFT_ratio": 0.75,
+    "mutual": true,
+    "epipolar_processed_px": 1,
+    "edges": "adjacent pairs plus source0-to-each and mapping15-to-future16..19",
+    "track_split": "global track component hash seed0 70/30; conflicting duplicate-view components discarded; fixed all frames so prefixes never resplit",
+    "plane_tracks": "temporal Shi-Tomasi/LK tracks, native capped768, win15 maxlevel4, forward/backward <=0.5 processed px, epipolar<=1px; reseed within plane excluding radius6 native pixels around all existing tracks. Track seed ID fixed for lifetime; no new seeds in future frames16..19.",
+    "SIFT_role": "global appearance tracks on listed edges for independent RGB triangulated clip scale; not used as replacement selected by GT"
+  },
+  "scale": "one positive clip scale from FIT RGB tracks triangulated with provided metric poses among mapping0..15 only, maximum parallax positive pair per physical track; fixed for every prefix/arm, no depth GT",
+  "arms": [
+    "B0 fixed raw*scale",
+    "B1 raw source0 plane",
+    "B2 fixed raw normal feature distance",
+    "B3 free plane feature objective",
+    "P8 raw-normal cone1degree feature objective"
+  ],
+  "prefix_fit": "all FIT track observation pairs on mapping indices less than N, within frozen same-plane polygons; future16..19 never used for fitting; correspondence support tracks>=12 and track-heldout>=6, maximum per-observed-view FIT hull>=0.1; source0 hull reported but not required, median fitted ray parallax>=1deg, Jacobian singular ratio>1e-6. Failure retains raw B0 with explicit status.",
+  "heldout": "track-heldout on available mapping frames and separate future-view pairs to mapping15/source0; future-view observation tracks never affect scale/plane fits. RGB correspondences are not geometric GT.",
+  "optimization": "unchanged fixed-camera shared world-plane bidirectional radial Huber1px; raw plus FIT linear seed; original P8 one-degree cone; positive depth on all prefix polygon vertices; no GT-based arm/prefix selection",
+  "depth_GT": {
+    "indoor": "TUM registered depth PNG /5000, nearest sample, missing stays missing",
+    "outdoor": "same-time Velodyne transformed using official calibration, nearest processed pixel Z-buffer, no fill or motion compensation; sparse sensor reference, not occlusion-perfect GT",
+    "drone": "EuRoC pointcloud0 scanner coordinates via T_WR and provided camera poses, nearest processed pixel Z-buffer, no filling; sensor-projected reference not official dense depth benchmark"
+  },
+  "evaluation": "separate post-fit stage reads depth/point GT; source0 ROI accuracy across N with identical pixels, per-frame ROI accuracy where meaningful; normals against GT reference plane, matching/future reprojection, rank/parallax and mask/visibility diagnostics; no cross-dataset pooled mean; RGB clips and raw/corrected/GT images/videos with provenance. No RGB-boundary segmentation, learned refinement, loop closure or pose optimization.",
+  "pre_matching_amendment": "Before any feature extraction/depth inspection/GT-depth read: use P1c-style temporal LK for plane observations, since P10 follows continuous RGB and existing P1c road matching policy. SIFT remains global scale source. No matching outcomes used to tune this amendment.",
+  "original_strict_source0_gate": "all FIT track observation pairs on mapping indices less than N, within frozen same-plane polygons; future16..19 never used for fitting; correspondence support tracks>=12 and track-heldout>=6, source0 FIT hull>=0.1, median fitted ray parallax>=1deg, Jacobian singular ratio>1e-6. Failure retains raw B0 with explicit status.",
+  "pre_depth_GT_gate_amendment": "Original strict fit-001 retained. Because source0 outdoor plane has no tracked features but later same-plane views do, fit-002 permits sufficiently distributed support in any observed view, retaining counts,1deg parallax and global Jacobian rank. Same masks/frames/raw/scale/solver, no GT-depth inspection or threshold lowering; tests global planar evidence rather than mandatory reference-image visibility."
+}

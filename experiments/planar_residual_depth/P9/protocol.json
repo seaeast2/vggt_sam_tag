@@ -1,0 +1,55 @@
+{
+  "stages": [
+    "P9a RGB warp diagnosis",
+    "P9b fixed normal photometric distance",
+    "P9c free normal photometric plane",
+    "P9d lighting/texture/mismatch diagnostics"
+  ],
+  "scope": "21 existing stereo-supported cases; 8 previous unsupported cases explicitly retained, no new independent validation or ETH3D five-view claim",
+  "routing": "pre-GT P3 manifests only; GT/previous GT-derived metric containers never enter fitting",
+  "fixed_inputs": "original masks, RGB images, provided cameras, raw depths and FIT-RGB common scale; original B2/B3 initialization produced without GT",
+  "objective": "forward source0-to-target1 planar RGB warp, radial RGB Huber delta=0.03 on [0,1] sRGB; global scalar gain and bias fitted with geometry, gain [0.7,1.3], bias [-0.15,0.15]; no feature-coordinate residual in P9b/c",
+  "direction": "forward photometric fit only, one canonical source pixel partition avoids forward/reverse physical observation split leakage",
+  "support": "fixed source pixels inside source mask eroded4px; source-to-target warp under BOTH original B2 and B3 inside target mask eroded9px; support frozen before photometric optimization, never dropped according to current residual",
+  "split": {
+    "tile_pixels": 32,
+    "guard_pixels_each_edge": 8,
+    "assignment": "hash seed0 of dataset:sample:tile_x:tile_y, <3 of10 heldout, otherwise FIT; same source pixels used across arms",
+    "max_FIT_pixels": 2048,
+    "max_heldout_pixels": 2048,
+    "sample": "deterministic uniform flattened-index selection, no texture/GT-based selection"
+  },
+  "support_gates": {
+    "FIT_pixels_min": 64,
+    "heldout_pixels_min": 32,
+    "FIT_tiles_min": 2,
+    "heldout_tiles_min": 1,
+    "FIT_hull_fraction_min": 0.1
+  },
+  "texture_gate": {
+    "source_FIT_RGB_gradient_RMS_min": 0.005,
+    "plane_Jacobian_after_gain_bias_projection_singular_ratio_min": 0.0001,
+    "policy": "numerically degenerate arm retains original B2 with explicit reason; low texture diagnostic, not an accuracy probability",
+    "fixed_direction_photo_J_RMS_min": 0.0001
+  },
+  "optimizer": {
+    "algorithm": "SLSQP, analytic bilinear RGB/plane/gain/bias gradients",
+    "maxiter": 200,
+    "ftol": 1e-10,
+    "Gaussian_sigma_processed_px": [
+      1.0,
+      0.5,
+      0.0
+    ],
+    "positive_depth_constraints": "all existing source/target polygon vertices",
+    "trust_region": "source polygon corner target coordinates within +/-3px per coordinate of original B2; original masks/points not altered; verify all dense source ROI pixels after solving"
+  },
+  "P9b": "original B1 direction fixed, distance only; initial original B2, original B1 only if trust admissible",
+  "P9c": "plane direction and distance free within same warp trust region; starts original B2, B3, and raw B1 only if admissible; lowest final FIT photometric objective among successful starts",
+  "P9a": "refit gain/bias on FIT only at original B2/B3; evaluate heldout warp error and visualize. GT reference plane warp evaluated ONLY after all fits as oracle diagnostic, never initialization or selection.",
+  "P9d": "report source texture, projected photo-Jacobian rank, affine brightness parameters at bounds, high-residual fraction, support/target footprint and trust boundary. No real occlusion GT: label high residual as appearance mismatch, not proven occlusion. No residual-driven deletion, no per-case GT-best arm selector.",
+  "retention": "support/texture/solver/positive-depth/trust failure retains original B2 for the affected arm; failed proposals/logs preserved; common support and successful-only plus all-retained metrics reported",
+  "evaluation": "all GT reads strictly post-fit; existing P4 GT arrays/reference reused. Report primary P9c-vs-P9b paired depth/normal and photometric losses, P9b-vs-B2, P9c-vs-B3; already-seen exploratory cases, ID bootstrap descriptive only. Report spatially unidentifiable cases, do not lower thresholds.",
+  "matched_trust_control": "F9C_MATCH_TRUST: original FIT correspondence objective with exactly the same +/-3px warp-corner trust and positive-depth constraints; separates search-region restriction from photometric objective effects",
+  "heldout_scope": "photometric pixels not used for P9 refinement, with spatial guards; original RGB/model/LK initialization may already encode these observations, not a fresh independent test"
+}

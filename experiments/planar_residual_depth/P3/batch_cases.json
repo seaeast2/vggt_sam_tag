@@ -1,0 +1,31 @@
+{
+ "mask_policy":"agent RGB designation; user explicitly waived review; not SAM, not human-approved; one conservative visible finite plane per case, no GT/raw/metric selection",
+ "cases":[
+ {"dataset":"kitti","sample":"000008","kind":"road","polygons":[[[185,248],[235,192],[350,192],[430,248]],[[145,248],[210,192],[322,192],[390,248]]]},
+ {"dataset":"kitti","sample":"000009","kind":"road","polygons":[[[185,248],[240,190],[340,190],[430,248]],[[145,248],[215,190],[315,190],[390,248]]]},
+ {"dataset":"kitti","sample":"000010","kind":"road","polygons":[[[190,248],[215,198],[375,198],[430,248]],[[150,248],[190,198],[345,198],[390,248]]]},
+ {"dataset":"kitti","sample":"000011","kind":"road","polygons":[[[190,248],[220,202],[365,202],[425,248]],[[150,248],[195,202],[335,202],[385,248]]]},
+ {"dataset":"kitti","sample":"000012","kind":"road","polygons":[[[190,248],[220,203],[355,203],[415,248]],[[150,248],[195,203],[325,203],[375,248]]]},
+ {"dataset":"kitti","sample":"000013","kind":"road","polygons":[[[95,245],[180,181],[300,181],[350,245]],[[55,245],[150,181],[270,181],[310,245]]]},
+ {"dataset":"kitti","sample":"000014","kind":"road","polygons":[[[100,240],[165,184],[310,184],[355,240]],[[60,240],[135,184],[280,184],[315,240]]]},
+ {"dataset":"kitti","sample":"000015","kind":"road","polygons":[[[100,235],[165,185],[310,185],[355,235]],[[60,235],[135,185],[280,185],[315,235]]]},
+ {"dataset":"kitti","sample":"000016","kind":"road","polygons":[[[95,245],[160,181],[310,181],[360,245]],[[55,245],[130,181],[280,181],[320,245]]]},
+ {"dataset":"kitti","sample":"000017","kind":"road","polygons":[[[95,245],[160,181],[310,181],[360,245]],[[55,245],[130,181],[280,181],[320,245]]]},
+ {"dataset":"kitti","sample":"000018","kind":"road","polygons":[[[155,248],[215,178],[267,178],[305,248]],[[115,248],[190,178],[242,178],[265,248]]]},
+ {"dataset":"kitti","sample":"000019","kind":"road","polygons":[[[150,248],[205,184],[275,184],[300,248]],[[110,248],[180,184],[250,184],[260,248]]]},
+ {"dataset":"middlebury","sample":"Motorcycle","kind":"floor","polygons":[[[20,307],[210,300],[340,326],[20,326]],[[20,307],[190,300],[320,326],[20,326]]]},
+ {"dataset":"middlebury","sample":"MotorcycleE","kind":"floor","polygons":[[[20,307],[210,300],[340,326],[20,326]],[[20,307],[190,300],[320,326],[20,326]]]},
+ {"dataset":"middlebury","sample":"Piano","kind":"bench_seat","polygons":[[[155,214],[263,191],[288,199],[195,238]],[[130,214],[238,191],[263,199],[170,238]]]},
+ {"dataset":"middlebury","sample":"PianoL","kind":"bench_seat","polygons":[[[155,214],[263,191],[288,199],[195,238]],[[130,214],[238,191],[263,199],[170,238]]]},
+ {"dataset":"middlebury","sample":"Pipes","kind":"none","polygons":null,"reason":"NO_UNAMBIGUOUS_VISIBLE_PLANE_RGB: curved pipes dominate; background fragmented by occluders"},
+ {"dataset":"middlebury","sample":"Playroom","kind":"flat_poster_on_wall","polygons":[[[308,98],[351,98],[351,130],[308,130]],[[293,98],[336,98],[336,130],[293,130]]]},
+ {"dataset":"middlebury","sample":"Playtable","kind":"carpet_floor","polygons":[[[20,280],[140,275],[175,345],[20,345]],[[25,280],[115,275],[148,345],[25,345]]]},
+ {"dataset":"middlebury","sample":"PlaytableP","kind":"carpet_floor","polygons":[[[20,280],[140,275],[175,345],[20,345]],[[25,280],[115,275],[148,345],[25,345]]]},
+ {"dataset":"middlebury","sample":"Recycle","kind":"wood_panel","polygons":[[[10,20],[90,20],[112,245],[55,266]],[[5,25],[65,25],[91,245],[35,267]]]},
+ {"dataset":"middlebury","sample":"Shelves","kind":"wall","polygons":[[[278,147],[370,147],[370,185],[278,185]],[[253,147],[345,147],[345,185],[253,185]]]},
+ {"dataset":"middlebury","sample":"Teddy","kind":"printed_back_wall","polygons":[[[255,22],[342,22],[342,88],[255,88]],[[222,22],[309,22],[309,88],[222,88]]]},
+ {"dataset":"middlebury","sample":"Vintage","kind":"poster_on_wall","polygons":[[[247,18],[393,18],[393,114],[247,114]],[[214,18],[360,18],[360,114],[214,114]]]},
+ {"dataset":"eth3d","sample":"delivery_area","kind":"ceiling","polygons":[[[55,70],[220,110],[220,180],[55,210]],[[280,15],[500,15],[500,100],[335,130]],[[260,10],[490,10],[490,55],[300,70]],[[270,10],[500,10],[500,50],[330,80]],[[270,45],[455,40],[455,90],[270,115]]]},
+ {"dataset":"eth3d","sample":"courtyard","kind":"ground","polygons":[[[60,330],[200,313],[400,310],[440,330]],[[35,330],[120,307],[180,330]],[[40,330],[65,280],[300,305],[310,330]],[[30,330],[60,307],[220,307],[255,330]],[[10,330],[60,285],[150,285],[190,330]]]}
+ ]
+}

@@ -1,0 +1,5 @@
+{
+  "P1b-baseline-direction-20261117-001": "plotting error; partial output",
+  "P1b-baseline-direction-20261117-002": "Middlebury PFM magnitude applied incorrectly; superseded by -003; KITTI values unaffected",
+  "P1b-baseline-direction-20261117-003": "OpenCV reader magnitude handling differs from Middlebury SDK; reference assertion failed"
+}

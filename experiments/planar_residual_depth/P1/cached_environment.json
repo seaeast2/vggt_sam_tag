@@ -1,0 +1,222 @@
+[
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/-AjG1UIrWt3m081a",
+    "distribution": "iopath-0.1.10.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/-k3gVpy4_bD3Dmpe",
+    "distribution": "anyio-4.16.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/169sqTYkaPgdPKbx",
+    "distribution": "nvidia_cublas-13.4.1.3.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/3hyIHZ3yyqITNi5Z",
+    "distribution": "click-8.5.1.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/4xXZQ-D5ziivyJX-",
+    "distribution": "nvidia_nvjitlink-13.5.37.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/6Pj6AHKAOk3r6knE",
+    "distribution": "setuptools-84.2.1.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/9T7wmV_n3l-8YKfx",
+    "distribution": "cuda_bindings-13.5.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/A2zJHheHbjNZKRqP",
+    "distribution": "nvidia_cuda_cccl-13.3.5.0.6.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/CP2RXqhQxSDqD4Uw",
+    "distribution": "nvidia_nvtx-13.2.86.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/G4KiXU-ilRDx-sTC",
+    "distribution": "nvidia_cusparse-12.7.10.12.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/GNpcLuvc7SuTbTzs",
+    "distribution": "nvidia_cufile-1.17.1.22.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/GTuJpTMWTH7M2ALu",
+    "distribution": "wheel-0.48.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/HY00g7y-k7BlGBbo",
+    "distribution": "cuda_pathfinder-1.8.6.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/Hy8Pr_7oN_zdU34p",
+    "distribution": "yacs-0.1.8.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/IXml2wa_lK5b6Gnz",
+    "distribution": "nvidia_cufft-12.2.0.57.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/I_RGClHmdipIo6mI",
+    "distribution": "truststore-0.10.5.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/J7ofWyoG8vNDiBGE",
+    "distribution": "opencv_python-4.11.0.86.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/K6K3vMyoqoJTeSXX",
+    "distribution": "cuda_toolkit-13.2.2.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/KEbIzx0_KUgjq22B",
+    "distribution": "filelock-4.2.10.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/LIQAxJb1UKZhRiYa",
+    "distribution": "ninja-1.13.2.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/N4THc4ckomY85hj3",
+    "distribution": "sympy-1.14.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/O76IOAk9LplIyJJc",
+    "distribution": "portalocker-4.4.2.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/Pni9OppoqJkBdqz4",
+    "distribution": "pillow-13.0.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/SBF_E0SiR_5SMh5p",
+    "distribution": "triton-3.9.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/Tqy7kAjdKYROoshD",
+    "distribution": "huggingface_hub-2.4.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/VSfX7O8lDf9wtbRT",
+    "distribution": "nvidia_cudnn_cu13-9.26.0.51.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/Wh1DnJphyhhmJJx6",
+    "distribution": "networkx-3.6.1.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/XMZYIoPd1Z0lhiTk",
+    "distribution": "fsspec-2026.9.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/YF31ou9uJYGnaySJ",
+    "distribution": "nvidia_nccl_cu13-2.30.7.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/_8nS3Qng1qsqP0kQ",
+    "distribution": "einops-0.8.2.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/aZrLWinHjOhTWyZs",
+    "distribution": "nvidia_cuda_cupti-13.2.86.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/gT-LleIKGbNVdL00",
+    "distribution": "pyyaml-6.0.3.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/i9THR17LxTf6Vr53",
+    "distribution": "safetensors-0.8.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/jCBbyCSIdR91wvRV",
+    "distribution": "idna-3.20.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/ksgNs6ey-pvUFOFp",
+    "distribution": "httpcore2-2.16.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/l0AbrlKsFcQGHbvM",
+    "distribution": "nvidia_cuda_runtime-13.2.86.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/lI69LttDCNxQ5QIZ",
+    "distribution": "nvidia_nvshmem_cu13-3.7.2.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/lMX0Wapkv33cmFaL",
+    "distribution": "tqdm-4.70.1.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/nAwAGx-H2TDwzzLJ",
+    "distribution": "numpy-1.26.4.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/nsSumIMGfSMDC9LV",
+    "distribution": "nvidia_cusolver-12.2.0.11.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/p9-_nXVZUlsYochX",
+    "distribution": "termcolor-3.3.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/qqGACVpd-zcBy7ET",
+    "distribution": "torch-2.15.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/rBQdsINdnk5rxGO0",
+    "distribution": "typing_extensions-4.16.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/s6-K6NmctFtPb8D4",
+    "distribution": "packaging-26.3.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/s6mBvUp9wiST7kaT",
+    "distribution": "hf_xet-1.8.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/sWq9ytUgOhgfdFRy",
+    "distribution": "torchvision-0.29.2.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/tvE3YeM5hCOXPrYt",
+    "distribution": "tabulate-0.10.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/wZLlVvN3v9ahi1-A",
+    "distribution": "jinja2-3.1.6.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/x04GMbNZeOI13m1e",
+    "distribution": "httpx2-2.16.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/yC3kEPjNKNt7q3qH",
+    "distribution": "markupsafe-3.0.4.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/yWnZY90Rww3ngFCX",
+    "distribution": "fvcore-0.1.5.post20221221.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/ybdUK-VoKQS77E3o",
+    "distribution": "mpmath-1.3.0.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/yk4PFLkscnydXGc_",
+    "distribution": "nvidia_cuda_nvrtc-13.2.86.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/yp0iIjk-GVibg0ja",
+    "distribution": "nvidia_cusparselt_cu13-0.8.1.dist-info"
+  },
+  {
+    "path": "/home/hlee221212/.cache/uv/archive-v0/zNRAk-V8Oi9oI7bK",
+    "distribution": "h11-0.16.0.dist-info"
+  }
+]
